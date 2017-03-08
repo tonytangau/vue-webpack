@@ -50,6 +50,14 @@ module.exports = {
     }],
     {{/if_eq}}
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'comma-dangle': ['error', 'never'],
+    'no-shadow': ['error', { 'allow': ['err'] }],
+    'quote-props': ['error', 'consistent'],
+    'global-require': 0,
+    'vars-on-top': 0,
+    'no-param-reassign': 0,
+    'no-else-return': 0,
+    'guard-for-in': 0
   }
 }
