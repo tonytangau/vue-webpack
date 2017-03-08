@@ -62,10 +62,10 @@ exports.cssLoaders = function (options) {
 exports.styleLoaders = function (options) {
   const loaders = exports.cssLoaders(options);
 
-  return Object.keys(loaders).map(loader => {
-    return { 
-      test: new RegExp(`\\.${loader}$`), 
+  return Object.keys(loaders).map(loader =>
+    ({
+      test: new RegExp(`\\.${loader}$`),
       use: loaders[loader]
-    }
-  });
+    })
+  );
 };
